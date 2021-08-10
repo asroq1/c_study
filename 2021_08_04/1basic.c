@@ -14,5 +14,6 @@
 int main (){
     printf("Hello world \n");
     printf("Hello world \n");
+    printf("This is my first step. \n");
     return 0;
 };
