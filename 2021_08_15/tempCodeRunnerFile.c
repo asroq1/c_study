@@ -1,0 +1,2 @@
+(*arrPtr)++;
+    *arrPtr++;
