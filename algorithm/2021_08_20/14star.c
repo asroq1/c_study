@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   5alarm.c                                           :+:      :+:    :+:   */
+/*   14star.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: devicii <asroq98@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 14:45:57 by devicii           #+#    #+#             */
-/*   Updated: 2021/08/20 14:45:57 by devicii          ###   ########.fr       */
+/*   Created: 2021/08/20 17:37:37 by devicii           #+#    #+#             */
+/*   Updated: 2021/08/20 17:37:37 by devicii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
 int main(){
-	int h, m;
-
-	scanf("%d %d", &h, &m);
-	m -= 45;
-
-	if(m < 0 && h != 0 ){
-		printf("%d %d ", h-1, m + 60);
-	}else if(h == 0 && m < 0){
-		printf("%d %d ", h = 23, m + 60);
-	}else if(h == 0 && m >= 0){
-		printf("%d %d ", h , m );
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++)
+	{
+		for(int j = 0; j <= i; j++){
+			printf("*");
+		}
+		printf("\n");
 	}
-	else if(m < 0){
-		printf("%d %d ", h, m + 60);
-	}else{
-		printf("%d %d", h, m);
-	}
+
 	return 0;
 }

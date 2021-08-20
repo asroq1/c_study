@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   5alarm.c                                           :+:      :+:    :+:   */
+/*   8summary.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: devicii <asroq98@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 14:45:57 by devicii           #+#    #+#             */
-/*   Updated: 2021/08/20 14:45:57 by devicii          ###   ########.fr       */
+/*   Created: 2021/08/20 16:52:11 by devicii           #+#    #+#             */
+/*   Updated: 2021/08/20 16:52:11 by devicii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
 int main(){
-	int h, m;
+	int sum, num;
+	sum = 0;
+	scanf("%d", &num);
 
-	scanf("%d %d", &h, &m);
-	m -= 45;
-
-	if(m < 0 && h != 0 ){
-		printf("%d %d ", h-1, m + 60);
-	}else if(h == 0 && m < 0){
-		printf("%d %d ", h = 23, m + 60);
-	}else if(h == 0 && m >= 0){
-		printf("%d %d ", h , m );
+	for (int i = 1; i <= num; i++)
+	{
+		sum += i;
 	}
-	else if(m < 0){
-		printf("%d %d ", h, m + 60);
-	}else{
-		printf("%d %d", h, m);
-	}
+	printf("%d", sum);
 	return 0;
 }
+
+

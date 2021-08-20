@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   5alarm.c                                           :+:      :+:    :+:   */
+/*   6gugudan.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: devicii <asroq98@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 14:45:57 by devicii           #+#    #+#             */
-/*   Updated: 2021/08/20 14:45:57 by devicii          ###   ########.fr       */
+/*   Created: 2021/08/20 15:59:41 by devicii           #+#    #+#             */
+/*   Updated: 2021/08/20 15:59:41 by devicii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
 int main(){
-	int h, m;
+	int n;
+	scanf("%d", &n);
 
-	scanf("%d %d", &h, &m);
-	m -= 45;
+	for (int i = 0; i < 9; i++)
+	{
+		printf("%d * %d = %d\n", n, i+1, n* (i+1));
+	}
 
-	if(m < 0 && h != 0 ){
-		printf("%d %d ", h-1, m + 60);
-	}else if(h == 0 && m < 0){
-		printf("%d %d ", h = 23, m + 60);
-	}else if(h == 0 && m >= 0){
-		printf("%d %d ", h , m );
-	}
-	else if(m < 0){
-		printf("%d %d ", h, m + 60);
-	}else{
-		printf("%d %d", h, m);
-	}
 	return 0;
 }
