@@ -32,10 +32,13 @@ int main(){
 				count++;
 			}
 		}
-
 	}
-	printf("%d", sizeof(arr) / sizeof(int) - count);
 
+	printf("count : %d \n", count);
+	printf("%d", sizeof(arr) / sizeof(int) - count);
 
 	return 0;
 }
+
+// i는 나누기 42를 해서 나온 나머지 값을 i라 칭한다. j는 동일한 나머지 값을 체크한다.
+// 근데 카운터가 45임은
