@@ -1,43 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4lookForAlphabet.c                                 :+:      :+:    :+:   */
+/*   3.sangsoo.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: devicii <asroq98@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/27 14:55:59 by devicii           #+#    #+#             */
-/*   Updated: 2021/08/27 14:55:59 by devicii          ###   ########.fr       */
+/*   Created: 2021/08/28 19:04:41 by devicii           #+#    #+#             */
+/*   Updated: 2021/08/28 19:04:41 by devicii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-//입력값 중 a b z 가 있으면 위치를 출력, 없다면 -1
+
 int main(){
-	char S[100];
-	scanf("%s", S);
-	int j, count;
-
-	// a - z까지 asicii코드 수만큼 돌린다.
-	for (int i = 97; i <= 123; i++)
+	char a[100], b[100];
+	char ra[100], rb[100];
+	int ia, ib;
+	scanf("%s %s", a, b);
+	for (int i =0; i < strlen(a) ; i++)
 	{
-		count = 0;
-		for (int j = 0; S[j] != NULL; j++)
-		{
-			if (S[j] == i)
-			{
-				printf("%d ", j);
-				count++;
-				break;
-			}
-		}
-		if (count == 0)
-		{
-			printf("-1 ");
-		}
-
+		ra[i] = a[ strlen(a) - (i + 1)];
 	}
-
+	for (int i =0; i < strlen(b) ; i++)
+	{
+		rb[i] = b[ strlen(b) - (i + 1)];
+	}
+	ia = atoi(ra);
+	ib = atoi(rb);
+	if(ia > ib)
+	{
+		printf("%d", ia);
+	}
+	else
+	{
+		printf("%d", ib);
+	}
 	return 0;
 }
-
