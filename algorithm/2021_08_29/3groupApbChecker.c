@@ -12,39 +12,40 @@
 
 #include <stdio.h>
 #include <string.h>
-int selector(char arr[], int length);
+
+int select(char a[], int len);
+
 int main(){
-	int n, sum, i;
+	int N,  i, sum = 0;
 	char arr[100];
 
-	scanf("%d", &n);
+	scanf("%d", &N);
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < N; i++)
 	{
 		scanf("%s", arr);
-		sum += selector(arr, strlen(arr));
+		sum += select(arr, strlen(arr));
 	}
 	printf("%d", sum);
 
 	return 0;
 }
 
-int selector(char arr[], int length){
+int select(char a[], int len){
 	int i, j;
 	int key = 0;
 
-	for (int i = 0; i < length; i++)
+	for (int i = 0; i < len; i++)
 	{
-		for (int j = 0; j < length; j++)
+		for (int j = 0; j < len; j++)
 		{
-			if(arr[i] == arr[j])
+			if(a[i] == a[j])
 			{
 
 				key = j - i;
 				if(key > 1 )
 				{
-
-					if(arr[j] != arr[j - 1]  ){
+					if(a[j] != a[j - 1]  ){
 						return 0;
 					}
 				}
@@ -53,3 +54,5 @@ int selector(char arr[], int length){
 	}
 	return 1;
 }
+
+
