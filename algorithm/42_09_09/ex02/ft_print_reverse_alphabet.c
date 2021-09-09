@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devicii <asroq98@gmail.com>                +#+  +:+       +#+        */
+/*   By: hyunjung <hyunjung@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 11:26:23 by devicii           #+#    #+#             */
-/*   Updated: 2021/09/09 11:26:23 by devicii          ###   ########.fr       */
+/*   Created: 2021/09/09 12:02:45 by hyunjung          #+#    #+#             */
+/*   Updated: 2021/09/09 12:02:45 by hyunjung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-extern void ft_putchar(char c);
 
-int main(void)
+#include <unistd.h>
 
-{
-    ft_putchar(47);
+void ft_print_reverse_alphabet(void){
+	char arr[1] = {122};
 
+	while (arr[0] > 96)
+	{
+		write(1, arr , 1);
+		arr[0]--;
+	}
+	
 }
-

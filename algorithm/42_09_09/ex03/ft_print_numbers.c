@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devicii <asroq98@gmail.com>                +#+  +:+       +#+        */
+/*   By: hyunjung <hyunjung@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 11:26:23 by devicii           #+#    #+#             */
-/*   Updated: 2021/09/09 11:26:23 by devicii          ###   ########.fr       */
+/*   Created: 2021/09/09 15:08:32 by hyunjung          #+#    #+#             */
+/*   Updated: 2021/09/09 15:08:32 by hyunjung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-extern void ft_putchar(char c);
+#include <unistd.h>
 
-int main(void)
-
+void ft_print_numbers()
 {
-    ft_putchar(47);
-
+    char a[1]={'0'};
+     while (a[0] <= '9')
+     { 
+        write(1, a, 1); 
+        a[0]++; 
+     }
+   
 }
-

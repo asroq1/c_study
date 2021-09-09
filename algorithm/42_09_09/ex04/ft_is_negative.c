@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: devicii <asroq98@gmail.com>                +#+  +:+       +#+        */
+/*   By: hyunjung <hyunjung@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 11:26:23 by devicii           #+#    #+#             */
-/*   Updated: 2021/09/09 11:26:23 by devicii          ###   ########.fr       */
+/*   Created: 2021/09/09 14:31:35 by hyunjung          #+#    #+#             */
+/*   Updated: 2021/09/09 14:31:35 by hyunjung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-extern void ft_putchar(char c);
+#include <unistd.h>
 
-int main(void)
-
+void ft_is_negative(int n)
 {
-    ft_putchar(47);
+    char yes = 'Y';
+    char no = 'N';
 
+    if ( n < 0)
+    {
+         write(1, &no , 1);
+    }
+    else
+    {
+         write(1, &yes , 1);
+    }
+    
 }
-
